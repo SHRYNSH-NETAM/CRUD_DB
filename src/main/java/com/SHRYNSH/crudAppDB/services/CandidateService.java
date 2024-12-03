@@ -63,6 +63,7 @@ public class CandidateService {
         List<Candidate> candidates = new ArrayList<>();
         for (MongoCandidate mongoCandidate : mongoCandidates) {
             Candidate candidate = new Candidate();
+            candidate.setId(mongoCandidate.getId());
             candidate.setName(mongoCandidate.getName());
             candidate.setCurrentCompany(mongoCandidate.getCurrentCompany());
             candidate.setSkills(mongoCandidate.getSkills());
@@ -81,6 +82,7 @@ public class CandidateService {
 
         for (JpaCandidate jpaCandidate : jpaCandidates) {
             Candidate candidate = new Candidate();
+            candidate.setId(jpaCandidate.getId());
             candidate.setName(jpaCandidate.getName());
             candidate.setCurrentCompany(jpaCandidate.getCurrentCompany());
             candidate.setSkills(jpaCandidate.getSkills());

@@ -8,6 +8,7 @@ import java.util.List;
 
 @Data
 public class Candidate {
+    private String id;
     private String name;
     private List<String> skills;
     private String currentCompany;
